@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розшук</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1c3b64;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .warning-banner {
+            background-color: #ffcc00;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .boss-section {
+            background-color: #c72c2c;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .boss-title {
+            font-size: 24px;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .boss-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .boss-photo {
+            width: 150px;
+            height: 200px;
+            background-color: #888;
+            margin-right: 20px;
+            border: 3px solid white;
+        }
+        
+        .person-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .person-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .person-photo {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .person-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .person-info {
+            padding: 15px;
+        }
+        
+        .person-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .person-details {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        footer {
+            background-color: #1c3b64;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Стилі для мобільних пристроїв */
+        @media screen and (max-width: 768px) {
+            .logo {
+                font-size: 24px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .boss-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .boss-photo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .person-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .boss-title {
+                font-size: 20px;
+            }
+            
+            .person-photo {
+                height: 180px;
+            }
+            
+            .warning-banner {
+                font-size: 14px;
+            }
+        }
+        
+        /* Стилі для дуже маленьких екранів */
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .person-grid {
+                gap: 15px;
+            }
+            
+            .boss-photo {
+                width: 120px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">НАЦІОНАЛЬНА БАЗА РОЗШУКУ</div>
+        <div>Відділ розшуку особливо небезпечних осіб</div>
+    </header>
+
+    <div class="warning-banner">
+        УВАГА! Всі особи, зазначені на цьому сайті, вважаються небезпечними. У разі їх виявлення не намагайтеся затримати їх самостійно!
+    </div>
+
+    <div class="container">
+        <div class="boss-section">
+            <div class="boss-title">ОСОБЛИВО НЕБЕЗПЕЧНИЙ - ГОЛОВА УГРУПОВАННЯ</div>
+            <div class="boss-info">
+                <div class="boss-photo">
+                    <img src="5372990614439847115_121.jpg" alt="Фото голови угруповання" width="150" height="200">
+                </div>
+                <div>
+                    <p><strong>Прізвище та ім'я:</strong> Бунецький Олексій Вікторович</p>
+                    <p><strong>Вік:</strong> 27 років</p>
+                    <p><strong>Злочини:</strong> Організація злочинного угруповання, крадіжка шкільних обідів</p>
+                    <p><strong>Статус:</strong> У активному розшуку</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Члени злочинного угруповання</h2>
+        <div class="person-grid">
+            <!-- Особа 1 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="1.jpg" alt="Фото особи 1">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Діяконенко Вероніка</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Запекановка"</p>
+                        <p><strong>Злочини:</strong> Надання шпаргалок, підказки на уроках</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Особа 2 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="2.jpg" alt="Фото особи 2">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Коротченко Кирил</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Короткий"</p>
+                        <p><strong>Злочини:</strong> Отримання занадто високих оцінок, переписування контрольних</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Особа 3 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="3.jpg" alt="Фото особи 3">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Гільмєєв Роберт</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Гелівий"</p>
+                        <p><strong>Злочини:</strong> Порушення розпорядку школи</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Особа 4 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="4.jpg" alt="Фото особи 4">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Барабан Ростик</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Барабанщик"</p>
+                        <p><strong>Злочини:</strong> Голосно грає на барабанах</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Особа 5 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="5.jpg" alt="Фото особи 5">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Рагімова Альбіна</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Рахмут"</p>
+                        <p><strong>Злочини:</strong> Дуже швидко отримує погані оцінки</p>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Особа 6 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="6.jpg" alt="Фото особи 6">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Шаталюк Макар</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Шатун"</p>
+                        <p><strong>Злочини:</strong> Ніколи не брав участь в Олімпіадах</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Особа 7 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="7.jpg" alt="Фото особи 7">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Дейнеко Денис</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 11 років</p>
+                        <p><strong>Прізвисько:</strong> "Диявол"</p>
+                        <p><strong>Злочини:</strong> Дуже швидко отримує добрі оцінки</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Особа 8 -->
+            <div class="person-card">
+                <div class="person-photo">
+                    <img src="8.jpg" alt="Фото особи 8">
+                </div>
+                <div class="person-info">
+                    <div class="person-name">Дуняшева Віталіна</div>
+                    <div class="person-details">
+                        <p><strong>Вік:</strong> 10 років</p>
+                        <p><strong>Прізвисько:</strong> "Душная"</p>
+                        <p><strong>Злочини:</strong> Найгірше вчитися в класі</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Національна База Розшуку. Цей сайт є гумористичним і не має відношення до реальних правоохоронних органів.
+    </footer>
+</body>
+</html>
